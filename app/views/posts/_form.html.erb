@@ -1,0 +1,11 @@
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :link %>
+  <%= f.button :submit %>
+<% end %>
+
+<br>
+
+<%= link_to "Home", root_path %>
+<%= link_to "New Post", new_post_path %>
