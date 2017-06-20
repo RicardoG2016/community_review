@@ -1,5 +1,10 @@
 <% @post.each do |p| %>
+  <%= link_to p  do %>
+    <%= image_tag p.image.url(:small) %>
+  <% end %>
+  <br>
   <%= link_to p.title, p %>
+  <br>
   <br>
 <% end %>
 
