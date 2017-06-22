@@ -1,14 +1,22 @@
-<% @post.each do |p| %>
-  <%= link_to p  do %>
-    <%= image_tag p.image.url(:small) %>
-  <% end %>
-  <br>
-  <%= link_to p.title, p %>
-  <br>
-  <br>
-<% end %>
-
+<br>
+<br>
 <br>
 
-<%= link_to "Home", root_path %>
-<%= link_to "New Post", new_post_path %>
+<div class="album text-muted">
+  <div class="container">  
+    <% @post.each do |p| %>
+    <div class="col-md-6">
+      <%= link_to p  do %>
+        <%= image_tag p.image.url(:small) %>
+      <% end %>
+      <br>
+      <%= link_to p.title, p %>
+        <p> <%= p.get_upvotes.size %> </p: 
+        <%= link_to "Like", like_post_path(p), method: :get %>
+        <p> <%= p.get_downvotes.size %> </p>:
+        <%= link_to "Dislike", dislike_post_path(p), method: :get %>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
   before_action :authenticate_user!, except: [:index, :show]
 
 def index
@@ -7,6 +7,7 @@ def index
 end
 
 def show
+  @comments = Comment.where(post_id: @post)
 end
 
 def new
@@ -40,6 +41,16 @@ end
 def destroy
   @post.destroy
   redirect_to '/'
+end
+
+def upvote
+  @post.upvote_by current_user
+  redirect_back(fallback_location: root_path)
+end
+
+def downvote
+  @post.downvote_by current_user
+  redirect_back(fallback_location: root_path)
 end
 
 private
