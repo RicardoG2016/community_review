@@ -2,10 +2,9 @@
 <br>
 <br>
 
-<div class="album text-muted">
-  <div class="container">  
-    <% @post.each do |p| %>
-    <div class="col-md-6">
+<div class="album text-muted col-md-12 row">  
+  <% @post.each do |p| %>
+    <div class="posts col-md-4">
       <%= link_to p  do %>
         <%= image_tag p.image.url(:small) %>
       <% end %>
@@ -16,7 +15,7 @@
         <p> <%= p.get_downvotes.size %> </p>:
         <%= link_to "Dislike", dislike_post_path(p), method: :get %>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <br>
     </div>
-    <% end %>
-  </div>
+  <% end %>
 </div>

@@ -11,4 +11,10 @@
  * It is generally better to create a new file per style scope.
  *
 @import "bootstrap";
+*= require_tree
  */
+
+ .page-spacing {
+  padding: 2%;
+  margin: auto;
+ }
