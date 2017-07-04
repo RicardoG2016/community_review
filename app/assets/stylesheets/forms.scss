@@ -1,0 +1,53 @@
+.form {
+  width: 600px;
+  background-color: #f5f8fa;
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+}
+
+.form h2 {
+  text-align: center;
+}
+
+.delete-account {
+  color: red;
+}
+
+label {
+  left: 0;
+  color: #004c8c;
+  padding: 5px;
+  display: inline;
+
+}
+
+form input {
+  box-sizing:border-box;
+  float: right;
+  width:230px;
+}
+
+form > div {
+  position:relative;
+  padding: 30px;
+}
+
+form input[type="text"] {
+  display:inline;
+}
+
+form input[type="button"] {
+  display:block;
+  width:100px; /* this is the `button width` */
+  position:absolute;
+  top:0;
+  left:100%; /* push to the right! */
+  margin-left:10px; /* this is the `button distance from search field` */
+}
+
+span.form-hint {
+  width: 100% !important;
+  padding: 5px;
+  text-align: center !important;
+}

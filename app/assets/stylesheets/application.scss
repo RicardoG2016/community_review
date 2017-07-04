@@ -11,6 +11,8 @@
  * It is generally better to create a new file per style scope.
  *
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 *= require_tree
  */
 
@@ -18,3 +20,35 @@
   padding: 2%;
   margin: auto;
  }
+
+ .navbar {
+  position: absolute;
+  height: 67px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+ }
+
+ a.nav-link {
+  text-decoration: none;
+  color: #757575;
+}
+
+.grid {
+  text-decoration: none;
+  color: #757575;
+  padding-left: 0 !important;
+}
+
+/*Google Iconcs*/
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.nav-header {
+  position: absolute;
+}
+
+
+
+

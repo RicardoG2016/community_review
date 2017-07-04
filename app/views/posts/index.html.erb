@@ -1,10 +1,7 @@
 <br>
-<br>
-<br>
-
 <div class="album text-muted col-md-12 row">  
   <% @post.each do |p| %>
-    <div class="posts col-md-4">
+    <div class="posts col-md-4 col-sm-12">
       <%= link_to p  do %>
         <%= image_tag p.image.url(:small) %>
       <% end %>

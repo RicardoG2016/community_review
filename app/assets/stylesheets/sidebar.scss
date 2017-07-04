@@ -25,12 +25,12 @@
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 250px;
+    left: 200px;
     width: 0;
     height: 100%;
-    margin-left: -250px;
+    margin-left: -200px;
     overflow-y: auto;
-    background: #000;
+    background: #004c8c;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -38,18 +38,19 @@
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: 200px;
 }
 
 #page-content-wrapper {
     width: 100%;
     position: absolute;
     padding: 15px;
+    margin-left: 55px;
 }
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -250px;
+    margin-right: -200px;
 }
 
 /* Sidebar Styles */
@@ -57,21 +58,22 @@
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
-    margin: 0;
+    width: 200px;
+    margin: 55px 0 0 0;
     padding: 0;
     list-style: none;
 }
 
 .sidebar-nav li {
-    text-indent: 20px;
+    text-indent: 10px;
     line-height: 40px;
 }
 
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999999;
+    /*color: #999999;*/
+    color: #fff;
 }
 
 .sidebar-nav li a:hover {
@@ -100,21 +102,33 @@
     background: none;
 }
 
+#sidebar-wrapper {
+    width: 75px;
+}
+
+/*icons*/
+
+.material-icons {
+    max-width: 50px;
+    padding-top: 10px;
+    padding-right: 65px;
+}
+
+.side-bar-text {
+  vertical-align: text-bottom;
+}
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 0;
     }
 
     #wrapper.toggled {
-        padding-left: 250px;
-    }
-
-    #sidebar-wrapper {
-        width: 0;
+        padding-left: 130px;
     }
 
     #wrapper.toggled #sidebar-wrapper {
-        width: 250px;
+        width: 200px;
     }
 
     #page-content-wrapper {

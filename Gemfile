@@ -41,7 +41,9 @@ gem 'simple_form', '3.5'
 gem 'devise', '4.3'
 gem 'paperclip', '5.1'
 gem 'acts_as_votable', '~> 0.10.0'
+gem 'font-awesome-sass', '~> 4.7.0'
 gem 'bootstrap', '~> 4.0.0.alpha3'
+
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
