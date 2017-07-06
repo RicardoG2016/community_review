@@ -3,6 +3,15 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
 def index
+  # params = { category: '1',
+  # city: 'Austin',
+  # country: 'TX',
+  # status: 'upcoming',
+  # format: 'json',
+  # page: '5'}
+  # meetup_api = MeetupApi.new
+  # cats = meetup_api.categories({})
+  # @events = cats['results']
   @post = Post.all.order("created_at DESC")
 end
 

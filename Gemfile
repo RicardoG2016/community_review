@@ -7,6 +7,8 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'rails', '~> 5.1.0.rc1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -43,7 +45,8 @@ gem 'paperclip', '5.1'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'bootstrap', '~> 4.0.0.alpha3'
-
+gem 'searchkick'
+gem 'meetup_client', '~> 1.0'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'

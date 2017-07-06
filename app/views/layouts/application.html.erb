@@ -22,27 +22,17 @@
 
     <div class="page-spacing">
       <nav class=" navbar navbar-toggleable-md fixed-top">
-<!--       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
         <div class="nav-header">
           <a href="#menu-toggle" class="grid" id="menu-toggle">
             <span><i class="material-icons md-36">menu</i></span>
           </a>
-          <a href="/">
-            <spam><a class="navbar-brand nav-item" href="/">Logo</a></spam>
+          <a href="/">            
+            <spam><a class="navbar-brand nav-item" href="/"><i class="material-icons md-36 pink200">terrain</i></a></spam>
           </a>
         </div>      
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-<!--           <li class="nav-item active">
-            <a class="nav-link" href="/">Home</a>
-          </li> -->
-          <!-- </li> -->
-        </ul>
-
+      <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
-            <form>
+            <form class="search-bar">
               <input class="submit_on_enter" type="text" name="q" placeholder="Search...">
             </form>
             <% if current_user %>
@@ -63,7 +53,7 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="/users/sign_up">Sign Up</a>
                 </li>         
-            <% end %>
+            <% end %>  
           </ul> 
     </nav>
 
@@ -86,10 +76,23 @@
                 <hr>
                 <li>                
                   <a href="#">
+                    <i class="material-icons md-36">video_library</i>
+                    <span class="side-bar-text">Videos</span>
+                  </a>
+                </li>                
+                <li>                
+                  <a href="#">
                     <i class="material-icons md-36">folder</i>
                     <span class="side-bar-text">Saved</span>
                   </a>
                 </li>
+                <li>                
+                  <a href="#">
+                    <i class="material-icons md-36">event</i>
+                    <span class="side-bar-text">Events</span>
+                  </a>
+                </li>
+                <hr>
                 <li>                
                   <a href="#">
                     <i class="material-icons md-36">mail</i>
@@ -103,18 +106,12 @@
                   </a>
                 </li>
                 <li>                
-                  <a href="#">
-                    <i class="material-icons md-36">event</i>
-                    <span class="side-bar-text">Events</span>
-                  </a>
-                </li>
-                <hr>
-                <li>                
                   <a href="/users/edit">
                     <i class="material-icons md-36">settings</i>
                     <span class="side-bar-text">Settings</span>
                   </a>
                 </li>
+                <hr>
                 <li>
                   <%= link_to destroy_user_session_path, :method => :delete do %>
                     <i class="material-icons md-36">exit_to_app</i>
@@ -136,17 +133,15 @@
             </div>
         </div>
     </div>
-
-    <hr>
     </div>
-    <footer class="text-muted">
+<!--     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
           <a href="#">Back to top</a>
         </p>
         <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
       </div>
-    </footer>
+    </footer> -->
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
