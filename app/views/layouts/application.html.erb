@@ -32,9 +32,12 @@
         </div>      
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav">
-            <form class="search-bar">
-              <input class="submit_on_enter" type="text" name="q" placeholder="Search...">
-            </form>
+            <%= form_tag search_posts_path, method: :get, class: "search-bar", role: "search" do %>
+              <p>
+                <%= text_field_tag :search, params[:search], placeholder: "Search...", class: "form-control" %>
+                <% submit_tag "", name: nil, class: "submit-on-enter" %>
+              </p>
+            <% end %>
             <% if current_user %>
               <li class="nav-item active">      
                 <a href="/posts/new">

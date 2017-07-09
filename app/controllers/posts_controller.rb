@@ -2,6 +2,14 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
   before_action :authenticate_user!, except: [:index, :show]
 
+def search
+  if params[:search].present?
+    @post = Post.search(params[:search])
+  else
+    @post = Post.all
+  end
+end
+
 def index
   # params = { category: '1',
   # city: 'Austin',
