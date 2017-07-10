@@ -3,7 +3,7 @@
   <div class="col-md-4 col-sm-12">
     <div class="card">
       <div class="card-block">
-        <h4 class="card-title">Video</h4>
+        <h4 class="card-title">Videos</h4>
         <p class="card-text">Watch recommended tutorial videos</p>
       </div>
     </div>
@@ -11,7 +11,7 @@
     <div class="col-md-4 col-sm-12">
     <div class="card">
       <div class="card-block">
-        <h4 class="card-title">Documentation</h4>
+        <h4 class="card-title">Articles</h4>
         <p class="card-text">Read articles and documentations</p>
       </div>
     </div>
@@ -32,14 +32,13 @@
 <div class="album text-muted col-md-12 row"> 
   <% @post.each do |p| %>
     <div class="posts col-md-7">
-      <%= link_to p  do %>
-        <%= image_tag p.image.url(:small) %>
-      <% end %>
+<!--         <%= link_to p  do %>
+          <%= image_tag p.image.url(:small) %>
+        <% end %> -->
       <br>
-      <%= link_to p.title, p, class: "post-title" %>
-      <br>
-      <br>
-      <p class="card-text post-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h3 class="text-muted"><%= link_to p.title, p, class: "post-title" %></h3>
+      <p class="card-text post-text"><%= p.description %></p>
+      <p class="card-text post-text">By: <%= p.user.name %></p>
       <hr>
       <%= link_to like_post_path(p), :method => :get do %>
         <i class="material-icons thumb">thumb_up</i>
@@ -50,6 +49,7 @@
         <span><%= p.get_downvotes.size %></span>
       <% end %>
       <br>
+
     </div>
   <% end %>
 </div>

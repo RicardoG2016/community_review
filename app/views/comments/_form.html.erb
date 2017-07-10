@@ -1,4 +1,6 @@
-<%= simple_form_for([@post, @post.comments.build]) do |f|
-  <%= f.input :content, label: "Reply to thread" %>
+<%= simple_form_for([@post, @post.comments.build]) do |f| %>
+  <%= f.input :content, label: "Add Comment", class: "label" %>
   <%= f.button :submit, class: "button" %>
 <% end %>
+
+

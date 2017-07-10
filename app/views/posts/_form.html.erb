@@ -1,7 +1,12 @@
-<%= simple_form_for @post do |f| %>
-  <%= f.input :image, as: :file %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :link %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <div class="">
+    <%= simple_form_for @post do |f| %>
+      <%= f.input :image, as: :file %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :link %>
+      <%= f.button :submit %>
+    <% end %>    
+  </div>
+</div>
+
