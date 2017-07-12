@@ -12,14 +12,14 @@
     <div class="card">
       <div class="card-block">
         <h4 class="card-title">Articles</h4>
-        <p class="card-text">Read articles and documentations</p>
+        <p class="card-text">Read documentation and articles</p>
       </div>
     </div>
   </div> 
   <div class="col-md-4 col-sm-12">
     <div class="card">
       <div class="card-block">
-        <h4 class="card-title">Events</h4>
+        <a href="/events"><h4 class="card-title">Events</h4></a>
         <p class="card-text">Find events going on in your community</p>
       </div>
     </div> 
@@ -29,7 +29,7 @@
 <br>
 <br>
 
-<div class="album text-muted col-md-12 row"> 
+<div class="album text-muted col-md-12 row">
   <% @post.each do |p| %>
     <div class="posts col-md-7">
 <!--         <%= link_to p  do %>
@@ -41,13 +41,14 @@
       <p class="card-text post-text">By: <%= p.user.name %></p>
       <hr>
       <%= link_to like_post_path(p), :method => :get do %>
-        <i class="material-icons thumb">thumb_up</i>
         <span><%= p.get_upvotes.size %></span>
+        <i class="material-icons thumb">thumb_up</i>
       <% end %>
       <%= link_to dislike_post_path(p), :method => :get do %>
-        <i class="material-icons thumb">thumb_down</i>
         <span><%= p.get_downvotes.size %></span>
+        <i class="material-icons thumb">thumb_down</i>        
       <% end %>
+      <span class="card-text post-text"><%= comment_count = pluralize(p.comments.count, "Comment") %></span
       <br>
 
     </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170622030559) do
+ActiveRecord::Schema.define(version: 20170712050412) do
 
   create_table "comments", force: :cascade do |t|
     t.text "content"
@@ -20,6 +20,33 @@ ActiveRecord::Schema.define(version: 20170622030559) do
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "city"
+    t.string "state"
+    t.integer "category_id"
+    t.datetime "time"
+    t.string "topic"
+    t.string "address"
+    t.string "venue_name"
+    t.string "status"
+    t.string "event_url"
+    t.integer "meetup_id"
+    t.integer "headcount"
+    t.float "distance"
+    t.integer "waitlist_count"
+    t.datetime "created"
+    t.integer "mybe_rsvp_count"
+    t.integer "yes_rsvp_count"
+    t.datetime "updated"
+    t.string "group_name"
+    t.integer "group_meetup_id"
+    t.string "group_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|

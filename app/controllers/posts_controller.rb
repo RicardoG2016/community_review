@@ -11,15 +11,15 @@ def search
 end
 
 def index
-  # params = { category: '1',
+  # params = { category: '34',
   # city: 'Austin',
-  # country: 'TX',
+  # zip: '78748',
   # status: 'upcoming',
   # format: 'json',
-  # page: '5'}
+  # page: '3'}
   # meetup_api = MeetupApi.new
-  # cats = meetup_api.categories({})
-  # @events = cats['results']
+  # response = meetup_api.open_events(params)
+  # @events = response['results']
   @post = Post.all.order("created_at DESC")
 end
 

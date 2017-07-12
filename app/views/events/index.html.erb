@@ -1,0 +1,29 @@
+<br>
+<h2 class="event-header text-muted">Current Meetup Events</h2>
+<br>
+<br>
+<div class="text-muted col-md-12 row"> 
+  <% @events.each do |e|%>
+    <div class="col-md-4 col-sm-12">
+      <div class="card event-card">
+        <div class="card-block event-block">
+          <a href="https://www.meetup.com/<%=e['group']['urlname']%>/events/<%=e['id']%>/"><h4 class="card-title event-title"><%= e['name'] %></h4></a>
+          <hr>
+          <div class="event-details">
+            <p class="card-text event-text">Group: <a href="https://www.meetup.com/<%=e['group']['urlname']%>"><%= e['group']['name'] %></p></a>            
+            <p class="card-text event-text">Date: <%= Time.at(e['time']/1000).strftime("%b-%d-%Y at %l:%M%p") %></p>             
+              <% if e['venue'] && e['venue']['name'] && e['venue']['address_1'] %> 
+                <p class="card-text event-text">Venue: <a href="https://www.google.com/maps/place/<%=e['venue']['address_1']%>"><%= e['venue']['name'] + ' at ' + e['venue']['address_1'] %></p></a>
+              <% else %>
+                <p class="card-text event-text">Venue: <%= "N/A" %></p>
+              <% end %>
+            <br>
+            <p class="card-text event-text">Distance: <%= e['distance'].round(2) %> miles</p>  
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <br>
+</div>

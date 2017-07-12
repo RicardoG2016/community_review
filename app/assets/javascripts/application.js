@@ -18,13 +18,30 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
+$(document).ready(function() {    
+// var x = document.getElementById("demo");
+
+// function getLocation() {
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(showPosition);
+//     } else { 
+//         x.innerHTML = "Geolocation is not supported by this browser.";
+//     }
+// }
+
+// function showPosition(position) {
+//     myloc = {
+//       lat: position.coords.latitude,
+//       log: position.coords.longitude
+//     }
+//     console.log(myloc.lat)
+//     console.log(myloc.log)
+//   }
 
   $('.submit_on_enter').keydown(function(event) {
     // enter has keyCode = 13, change it if you want to use another button
     if (event.keyCode == 13) {
       this.form.submit();
-      // return false;
     }
   });
 });

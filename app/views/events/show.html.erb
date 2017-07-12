@@ -1,0 +1,13 @@
+<div class="album text-muted col-md-12 row"> 
+    <div class="posts col-md-7">
+      <br>
+      <h3 class="text-muted"><%= @event['name'] %></h3>
+      <hr>
+        <% if @event['venue'] && @event['venue']['address_1'] && @event['venue']['city']%>
+        <span class="card-text">Address: <%= @event['venue']['address_1'] %>,<%= @event['venue']['city'] %></span>
+        <% end %>
+          <br>
+          <p class="event-description card-text">Description: <%=raw @event['description'] %></p>
+          <hr>
+    </div>
+</div>

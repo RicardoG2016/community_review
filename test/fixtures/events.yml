@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  city: MyString
+  state: MyString
+  category_id: 1
+  time: 2017-07-12 00:04:12
+  topic: MyString
+  address: MyString
+  venue_name: MyString
+  status: MyString
+  event_url: MyString
+  meetup_id: 1
+  headcount: 1
+  distance: 1.5
+  waitlist_count: 1
+  created: 2017-07-12 00:04:12
+  mybe_rsvp_count: 1
+  yes_rsvp_count: 1
+  updated: 2017-07-12 00:04:12
+  group_name: MyString
+  group_meetup_id: 1
+  group_url: MyString
+
+two:
+  name: MyString
+  description: MyText
+  city: MyString
+  state: MyString
+  category_id: 1
+  time: 2017-07-12 00:04:12
+  topic: MyString
+  address: MyString
+  venue_name: MyString
+  status: MyString
+  event_url: MyString
+  meetup_id: 1
+  headcount: 1
+  distance: 1.5
+  waitlist_count: 1
+  created: 2017-07-12 00:04:12
+  mybe_rsvp_count: 1
+  yes_rsvp_count: 1
+  updated: 2017-07-12 00:04:12
+  group_name: MyString
+  group_meetup_id: 1
+  group_url: MyString
